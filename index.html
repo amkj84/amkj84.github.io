@@ -1,1 +1,116 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Atif Mehmood — Electronics Engineer (NUST) | Generative AI, App Dev, AI content creator" />
+  <title>Atif Mehmood — Electronics Engineer</title>
+  <style>
+    :root{
+      --bg:#f5f7fb; --card:#fff; --text:#111; --muted:#555; --accent:#0b76d1;
+    }
+    .dark { --bg:#0f1720; --card:#0b1220; --text:#e6eef8; --muted:#9fb3d0; --accent:#4aa3ff; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#6bd6ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    h1{margin:0;font-size:20px}
+    .sub{color:var(--muted);font-size:13px}
+    .container{max-width:960px;margin:18px auto;padding:0 18px}
+    .row{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+    .small{font-size:13px;color:var(--muted)}
+    .skills ul{list-style:none;padding:0;margin:8px 0 0 0;display:grid;grid-template-columns:repeat(1,1fr);gap:6px}
+    .skills li{background:rgba(0,0,0,0.03);padding:8px;border-radius:6px}
+    .projects .project{margin-bottom:12px}
+    a{color:var(--accent);text-decoration:none;font-weight:600}
+    footer{margin-top:18px;text-align:center;color:var(--muted);padding:18px 0}
+    .toggle-btn{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px 10px;border-radius:8px;cursor:pointer}
+    @media (max-width:880px){.row{grid-template-columns:1fr} .avatar{display:none}}
+  </style>
+</head>
+<body>
+  <div id="page" class="">
+    <header>
+      <div class="brand">
+        <div class="avatar">AM</div>
+        <div>
+          <h1>Atif Mehmood</h1>
+          <div class="sub">Electronics Engineer | Generative AI & App Dev | Content Creator</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="small" href="https://www.linkedin.com/in/atif-mehmood-a34603100" target="_blank">LinkedIn</a>
+        <a class="small" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a>
+        <button id="themeToggle" class="toggle-btn small">Toggle theme</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="row">
+        <section class="card">
+          <h2>About Me</h2>
+          <p class="small">Electronics engineer from NUST, Pakistan, with expertise in electronic systems and computer-based applications. Expanding into Generative AI, app development, and AI-driven applications while creating content in the AI and technology space.</p>
+
+          <div class="skills" style="margin-top:14px">
+            <h3>Skills & Expertise</h3>
+            <ul>
+              <li><strong>Electronics & Hardware:</strong> Circuit Design, PCB Rectification, GSM/GPS</li>
+              <li><strong>AI:</strong> Generative AI, RAG, Text-to-SQL, ML</li>
+              <li><strong>Dev:</strong> Python, Gradio, Streamlit, Hugging Face</li>
+              <li><strong>Content:</strong> Technical Writing, AI/Tech Content</li>
+            </ul>
+          </div>
+
+          <div class="projects" style="margin-top:14px">
+            <h3>Projects & Work</h3>
+            <div class="project card" style="padding:10px">
+              <strong>GSM-Based Vehicle Tracking System</strong>
+              <p class="small">Multi-vehicle GPS + GSM real-time tracking (FYP).</p>
+            </div>
+            <div class="project card" style="padding:10px">
+              <strong>3D Fashion Design AI</strong>
+              <p class="small">Generative AI model + 3D pipeline for boutiques.</p>
+            </div>
+            <div class="project card" style="padding:10px">
+              <strong>RAG Learning App</strong>
+              <p class="small">Retrieval-augmented learning application for students.</p>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <a href="CV-Atif-Mehmood.pdf" download>Download CV</a>
+          </div>
+        </section>
+
+        <aside class="card">
+          <h3>Contact</h3>
+          <p class="small">Email: <a href="mailto:atif@example.com">atif@example.com</a></p>
+          <h4 style="margin-top:14px">Experience</h4>
+          <p class="small">AI App Development · PCB Engineering · GSM Vehicle Tracking</p>
+          <h4 style="margin-top:14px">Education</h4>
+          <p class="small">B.Sc. Electronics Engineering — NUST</p>
+        </aside>
+      </div>
+
+      <footer>
+        <p>© 2025 Atif Mehmood. All rights reserved.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const page = document.getElementById('page');
+    const btn = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('site-theme');
+    if(saved === 'dark'){ page.classList.add('dark'); }
+    function toggleTheme(){
+      page.classList.toggle('dark');
+      localStorage.setItem('site-theme', page.classList.contains('dark') ? 'dark' : 'light');
+    }
+    btn.addEventListener('click', toggleTheme);
+  </script>
+</body>
+</html>
