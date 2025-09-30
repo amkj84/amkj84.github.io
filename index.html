@@ -1,38 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Atif Mehmood — Electronics Engineer (NUST) | Generative AI, App Dev, AI content creator" />
-  <title>Atif Mehmood — Electronics Engineer</title>
+  <meta name="description" content="Atif Mehmood — Electronics Engineer (NUST) | Generative AI, App Dev, AI Content Creator" />
+  <title>Atif Mehmood — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
+    :root {
       --bg:#f5f7fb; --card:#fff; --text:#111; --muted:#555; --accent:#0b76d1;
     }
-    .dark { --bg:#0f1720; --card:#0b1220; --text:#e6eef8; --muted:#9fb3d0; --accent:#4aa3ff; }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
-    header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px}
-    .brand{display:flex;gap:12px;align-items:center}
-    .avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#6bd6ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
-    h1{margin:0;font-size:20px}
-    .sub{color:var(--muted);font-size:13px}
-    .container{max-width:960px;margin:18px auto;padding:0 18px}
-    .row{display:grid;grid-template-columns:1fr 320px;gap:18px}
-    .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
-    .small{font-size:13px;color:var(--muted)}
-    .skills ul{list-style:none;padding:0;margin:8px 0 0 0;display:grid;grid-template-columns:repeat(1,1fr);gap:6px}
-    .skills li{background:rgba(0,0,0,0.03);padding:8px;border-radius:6px}
-    .projects .project{margin-bottom:12px}
-    a{color:var(--accent);text-decoration:none;font-weight:600}
-    footer{margin-top:18px;text-align:center;color:var(--muted);padding:18px 0}
-    .toggle-btn{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px 10px;border-radius:8px;cursor:pointer}
-    @media (max-width:880px){.row{grid-template-columns:1fr} .avatar{display:none}}
+    .dark {
+      --bg:#0f1720; --card:#0b1220; --text:#e6eef8; --muted:#9fb3d0; --accent:#4aa3ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; font-family: 'Inter', sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.6;
+    }
+    header {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:18px 24px; background:var(--card); box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+    .brand { display:flex; gap:12px; align-items:center; }
+    .avatar {
+      width:44px; height:44px; border-radius:50%;
+      background:linear-gradient(135deg,var(--accent),#6bd6ff);
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; font-weight:700; font-size:18px;
+    }
+    h1 { margin:0; font-size:20px; }
+    .sub { color:var(--muted); font-size:13px; }
+    .links a {
+      margin-left:12px; font-size:14px; font-weight:600; color:var(--accent); text-decoration:none;
+    }
+    .links a:hover { text-decoration:underline; }
+    .toggle-btn {
+      margin-left:12px; padding:6px 10px; border:1px solid rgba(0,0,0,0.1);
+      border-radius:8px; background:transparent; cursor:pointer; font-size:13px;
+    }
+    .container { max-width:960px; margin:24px auto; padding:0 18px; }
+    h2 { margin-top:28px; font-size:22px; }
+    h3 { margin-top:16px; font-size:18px; }
+    .card {
+      background:var(--card); padding:16px; border-radius:10px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.06); margin:14px 0;
+    }
+    ul { padding-left:18px; }
+    footer {
+      margin-top:30px; text-align:center; color:var(--muted); padding:20px 0;
+    }
+    @media(max-width:768px){ header{flex-direction:column;align-items:flex-start} }
   </style>
 </head>
 <body>
-  <div id="page" class="">
+  <div id="page">
     <header>
       <div class="brand">
         <div class="avatar">AM</div>
@@ -41,64 +63,64 @@
           <div class="sub">Electronics Engineer | Generative AI & App Dev | Content Creator</div>
         </div>
       </div>
-      <div style="display:flex;gap:10px;align-items:center">
-        <a class="small" href="https://www.linkedin.com/in/atif-mehmood-a34603100" target="_blank">LinkedIn</a>
-        <a class="small" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a>
-        <button id="themeToggle" class="toggle-btn small">Toggle theme</button>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/atif-mehmood-a34603100" target="_blank">LinkedIn</a>
+        <a href="https://github.com/amkj84" target="_blank">GitHub</a>
+        <a href="https://huggingface.co/amkj84" target="_blank">Hugging Face</a>
+        <button id="themeToggle" class="toggle-btn">Toggle Theme</button>
       </div>
     </header>
 
     <main class="container">
-      <div class="row">
-        <section class="card">
-          <h2>About Me</h2>
-          <p class="small">Electronics engineer from NUST, Pakistan, with expertise in electronic systems and computer-based applications. Expanding into Generative AI, app development, and AI-driven applications while creating content in the AI and technology space.</p>
+      <section>
+        <h2>About Me</h2>
+        <p>Electronics engineer from NUST, Pakistan, with expertise in electronic systems and computer-based applications. Expanding into Generative AI, app development, and AI-driven applications while creating content in the AI and technology space.</p>
+      </section>
 
-          <div class="skills" style="margin-top:14px">
-            <h3>Skills & Expertise</h3>
-            <ul>
-              <li><strong>Electronics & Hardware:</strong> Circuit Design, PCB Rectification, GSM/GPS</li>
-              <li><strong>AI:</strong> Generative AI, RAG, Text-to-SQL, ML</li>
-              <li><strong>Dev:</strong> Python, Gradio, Streamlit, Hugging Face</li>
-              <li><strong>Content:</strong> Technical Writing, AI/Tech Content</li>
-            </ul>
-          </div>
+      <section>
+        <h2>Skills & Expertise</h2>
+        <ul>
+          <li><strong>Electronics & Hardware:</strong> Circuit Design, PCB Rectification, GSM/GPS Systems</li>
+          <li><strong>Artificial Intelligence:</strong> Generative AI, RAG, Text-to-SQL, Machine Learning</li>
+          <li><strong>Development:</strong> Python, Gradio, Streamlit, Hugging Face</li>
+          <li><strong>Content Creation:</strong> Technical Writing, AI/Tech Content</li>
+        </ul>
+      </section>
 
-          <div class="projects" style="margin-top:14px">
-            <h3>Projects & Work</h3>
-            <div class="project card" style="padding:10px">
-              <strong>GSM-Based Vehicle Tracking System</strong>
-              <p class="small">Multi-vehicle GPS + GSM real-time tracking (FYP).</p>
-            </div>
-            <div class="project card" style="padding:10px">
-              <strong>3D Fashion Design AI</strong>
-              <p class="small">Generative AI model + 3D pipeline for boutiques.</p>
-            </div>
-            <div class="project card" style="padding:10px">
-              <strong>RAG Learning App</strong>
-              <p class="small">Retrieval-augmented learning application for students.</p>
-            </div>
-          </div>
+      <section>
+        <h2>Projects & Work</h2>
+        <div class="card">
+          <h3><a href="https://huggingface.co/spaces/amkj84/Pak-Tour-Travel-Guide" target="_blank">Pak Tour Travel Guide</a></h3>
+          <p>AI-powered travel assistant using RAG and Groq API, deployed on Hugging Face Spaces.</p>
+        </div>
+        <div class="card">
+          <h3><a href="https://huggingface.co/spaces/amkj84" target="_blank">Other Hugging Face Projects</a></h3>
+          <p>Multiple AI-powered apps: 3D fashion design, ship design, RAG-based learning, text-to-SQL.</p>
+        </div>
+      </section>
 
-          <div style="margin-top:12px">
-            <a href="CV-Atif-Mehmood.pdf" download>Download CV</a>
-          </div>
-        </section>
+      <section>
+        <h2>Experience</h2>
+        <div class="card"><strong>AI Application Development (Present):</strong> Building AI-powered applications in fashion, ship design, learning, and tourism.</div>
+        <div class="card"><strong>PCB Engineering (Recent):</strong> Multi-layer PCB rectification and fabrication.</div>
+        <div class="card"><strong>GSM Vehicle Tracking (FYP):</strong> GPS + GSM real-time vehicle tracking system.</div>
+      </section>
 
-        <aside class="card">
-          <h3>Contact</h3>
-          <p class="small">Email: <a href="mailto:atif@example.com">atif@example.com</a></p>
-          <h4 style="margin-top:14px">Experience</h4>
-          <p class="small">AI App Development · PCB Engineering · GSM Vehicle Tracking</p>
-          <h4 style="margin-top:14px">Education</h4>
-          <p class="small">B.Sc. Electronics Engineering — NUST</p>
-        </aside>
-      </div>
+      <section>
+        <h2>Education</h2>
+        <p><strong>Bachelor's in Electronics Engineering</strong> — NUST (National University of Sciences and Technology), Pakistan</p>
+      </section>
 
-      <footer>
-        <p>© 2025 Atif Mehmood. All rights reserved.</p>
-      </footer>
+      <section>
+        <h2>Get In Touch</h2>
+        <p>Email: <a href="mailto:amkj84@hotmail.com">amkj84@hotmail.com</a></p>
+        <p>Always open to new projects, creative ideas, or opportunities to collaborate.</p>
+      </section>
     </main>
+
+    <footer>
+      <p>© 2025 Atif Mehmood. All rights reserved.</p>
+    </footer>
   </div>
 
   <script>
@@ -106,11 +128,10 @@
     const btn = document.getElementById('themeToggle');
     const saved = localStorage.getItem('site-theme');
     if(saved === 'dark'){ page.classList.add('dark'); }
-    function toggleTheme(){
+    btn.addEventListener('click', () => {
       page.classList.toggle('dark');
       localStorage.setItem('site-theme', page.classList.contains('dark') ? 'dark' : 'light');
-    }
-    btn.addEventListener('click', toggleTheme);
+    });
   </script>
 </body>
 </html>
